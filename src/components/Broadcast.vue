@@ -86,7 +86,7 @@ export default {
       console.log(e.data);
       this.chunks.push(e.data);
     },
-    onstop(e) {
+    onstop() {
       console.log("recorder stopped");
       const blob = new Blob(this.chunks, { type: "audio/webm; codecs=opus" });
       this.chunks = [];
