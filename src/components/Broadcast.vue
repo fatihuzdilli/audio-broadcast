@@ -8,9 +8,7 @@
 
 <script>
 import firebase from "../firebase-lib";
-
 const db = firebase.ref("/");
-
 export default {
   name: "Broadcast",
   data() {

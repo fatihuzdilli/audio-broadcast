@@ -1,21 +1,26 @@
 <template>
   <Broadcast v-if="showBroadcast" />
   <HelloWorld v-if="showHelloWorld" />
+  <Record v-if="showRecord" />
 </template>
 
 <script>
 import Broadcast from "./components/Broadcast.vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import Record from "./components/Record.vue";
+
 export default {
   name: "App",
   components: {
     Broadcast,
     HelloWorld,
+    Record,
   },
   data() {
     return {
-      showHelloWorld: window.location.search.includes("helloworld"),
       showBroadcast: window.location.search.includes("broadcast"),
+      showHelloWorld: window.location.search.includes("helloworld"),
+      showRecord: window.location.search.includes("record"),
     };
   },
 };
